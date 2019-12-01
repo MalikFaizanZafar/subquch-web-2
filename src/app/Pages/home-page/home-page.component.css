@@ -1,5 +1,7 @@
 .sq-top-navbar {
   background-color: #455A64 !important;
-  width: 100% !important;
-  border-radius: 0 !important;
+}
+
+.sq-navbar-logo {
+  color: white !important;
 }
