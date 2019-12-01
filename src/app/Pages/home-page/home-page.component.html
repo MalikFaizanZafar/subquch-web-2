@@ -66,54 +66,20 @@
         </div>
       </div>
       <div class="row my-5">
-        <div class="col-4">
+        <div class="col-4" *ngFor="let project of projects">
           <div class="card">
             <img
-              src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              [src]="project.logoUrl"
               class="card-img-top"
               alt="..."
+              height="300"
             />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">{{project.title}}</h5>
               <p class="card-text sq-normal-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                {{project.summary}}
               </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <img
-              src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title sq-normal-text">Card title</h5>
-              <p class="card-text sq-normal-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card">
-            <img
-              src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#" class="btn btn-primary">View Project</a>
             </div>
           </div>
         </div>

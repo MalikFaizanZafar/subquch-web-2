@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './Pages/home-page/home-page.component';
 import {  Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes : Routes = [
   {
@@ -23,6 +24,7 @@ const routes : Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
     MatCarouselModule.forRoot(),
     AppRoutingModule,
