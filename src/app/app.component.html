@@ -1,1 +1,66 @@
+<nav class="navbar  sq-top-navbar">
+  <a class="navbar-brand text-white sq-navbar-logo" href="#">Subquch</a>
+  <div>
+    <button
+      class="btn btn-lg btn-outline-success my-2 my-sm-0 mr-5"
+      type="submit"
+    >
+      Sign In
+    </button>
+    <button
+      class="btn btn-lg btn-outline-success my-2 my-sm-0 mr-2"
+      type="submit"
+    >
+      Sign Up
+    </button>
+  </div>
+</nav>
+
+<div class="container-fluid py-3">
+   <div class="row">
+     <div class="col-6 offset-3">
+        <ul class="nav nav-pills">
+            <li style="border-right: 1px solid #455A64;" class="text-center font-weight-bold px-3 py-3 active w-25"><a [routerLink]="['/']" class="sq-anchor">Home</a></li>
+            <li style="border-right: 1px solid #455A64;" class="text-center font-weight-bold px-3 py-3 active w-25"><a [routerLink]="['/projects']" class="sq-anchor">Projects</a></li>
+            <li style="border-right: 1px solid #455A64;" class="text-center font-weight-bold px-3 py-3  w-25"><a href="#" class="sq-anchor">About Us</a></li>
+            <li class="text-center font-weight-bold px-3 py-3  w-25"><a href="#" class="sq-anchor">Contact Us</a></li>
+          </ul>
+     </div>
+   </div>
+  </div>
 <router-outlet></router-outlet>
+<footer class="py-5" style="background-color: #455A64;">
+  <div class="row">
+    <div class="col-10 offset-1 col-md">
+      <h2 class="text-white">SubQuch</h2>
+      <p class="text-white">
+        This is some Text. This is some Text. This is some Text. This is some Text. This is some Text. This is some Text. 
+        This is some Text. This is some Text. This is some Text. This is some Text. This is some Text. This is some Text. 
+      </p>
+      <div>
+        <i class="fa fa-2x fa-twitter mx-3 text-white"></i>
+        <i class="fa fa-2x fa-google mx-3 text-white"></i>
+        <i class="fa fa-2x fa-facebook-official mx-3 text-white"></i>
+        <i class="fa fa-2x fa-instagram mx-3 text-white"></i>
+      </div>
+    </div>
+    <div class="col-5 offset-1 col-md">
+        <h5 class="text-white">About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-white" href="#">Team</a></li>
+          <li><a class="text-white" href="#">Locations</a></li>
+          <li><a class="text-white" href="#">Privacy</a></li>
+          <li><a class="text-white" href="#">Terms</a></li>
+        </ul>
+      </div>
+    <div class="col-5 offset-1 col-md">
+      <h5 class="text-white">Usefull Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-white" href="#">Resource</a></li>
+        <li><a class="text-white" href="#">Resource name</a></li>
+        <li><a class="text-white" href="#">Another resource</a></li>
+        <li><a class="text-white" href="#">Final resource</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

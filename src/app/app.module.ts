@@ -9,6 +9,7 @@ import { HomePageComponent } from './Pages/home-page/home-page.component';
 import {  Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectsPageComponent } from './Pages/projects-page/projects-page.component';
 
 const routes : Routes = [
   {
@@ -20,7 +21,8 @@ const routes : Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    ProjectsPageComponent
   ],
   imports: [
     BrowserModule,

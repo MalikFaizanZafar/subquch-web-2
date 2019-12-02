@@ -20,6 +20,17 @@
   background-size: cover;
 }
 
+.sq-anchor {
+  color: #455A64 !important;
+}
+
+.sq-button {
+  background-color: #455A64 !important;
+}
+
+.sq-anchor:hover {
+  text-decoration: none;
+}
 .sq-normal-text {
   color: #607d8b !important;
 }
