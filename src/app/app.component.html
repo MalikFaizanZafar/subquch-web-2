@@ -17,25 +17,68 @@
 </nav>
 
 <div class="container-fluid py-3">
-   <div class="row">
-     <div class="col-6 offset-3">
-        <ul class="nav nav-pills">
-            <li style="border-right: 1px solid #455A64;" class="text-center font-weight-bold px-3 py-3 active w-25"><a [routerLink]="['/']" class="sq-anchor">Home</a></li>
-            <li style="border-right: 1px solid #455A64;" class="text-center font-weight-bold px-3 py-3 active w-25"><a [routerLink]="['/projects']" class="sq-anchor">Projects</a></li>
-            <li style="border-right: 1px solid #455A64;" class="text-center font-weight-bold px-3 py-3  w-25"><a href="#" class="sq-anchor">About Us</a></li>
-            <li class="text-center font-weight-bold px-3 py-3  w-25"><a href="#" class="sq-anchor">Contact Us</a></li>
-          </ul>
-     </div>
-   </div>
+  <div class="row">
+    <div class="col-6 offset-3">
+      <ul class="nav nav-pills">
+        <li
+          style="border-right: 1px solid #455A64;"
+          class="text-center font-weight-bold px-3 py-3 active w-25"
+        >
+          <a
+            routerLinkActive="sq-active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [routerLink]="['']"
+            class="sq-anchor text-decoration-none"
+            >Home</a
+          >
+        </li>
+        <li
+          style="border-right: 1px solid #455A64;"
+          class="text-center font-weight-bold px-3 py-3 active w-25"
+        >
+          <a
+            routerLinkActive="sq-active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [routerLink]="['projects']"
+            class="sq-anchor text-decoration-none"
+            >Projects</a
+          >
+        </li>
+        <li
+          routerLinkActive="sq-active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          style="border-right: 1px solid #455A64;"
+          class="text-center font-weight-bold px-3 py-3  w-25"
+        >
+          <a
+            routerLinkActive="sq-active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="sq-anchor text-decoration-none"
+            >About Us</a
+          >
+        </li>
+        <li class="text-center font-weight-bold px-3 py-3  w-25">
+          <a
+            routerLinkActive="sq-active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="sq-anchor text-decoration-none"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
+</div>
 <router-outlet></router-outlet>
 <footer class="py-5" style="background-color: #455A64;">
   <div class="row">
     <div class="col-10 offset-1 col-md">
       <h2 class="text-white">SubQuch</h2>
       <p class="text-white">
-        This is some Text. This is some Text. This is some Text. This is some Text. This is some Text. This is some Text. 
-        This is some Text. This is some Text. This is some Text. This is some Text. This is some Text. This is some Text. 
+        This is some Text. This is some Text. This is some Text. This is some
+        Text. This is some Text. This is some Text. This is some Text. This is
+        some Text. This is some Text. This is some Text. This is some Text. This
+        is some Text.
       </p>
       <div>
         <i class="fa fa-2x fa-twitter mx-3 text-white"></i>
@@ -45,14 +88,14 @@
       </div>
     </div>
     <div class="col-5 offset-1 col-md">
-        <h5 class="text-white">About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-white" href="#">Team</a></li>
-          <li><a class="text-white" href="#">Locations</a></li>
-          <li><a class="text-white" href="#">Privacy</a></li>
-          <li><a class="text-white" href="#">Terms</a></li>
-        </ul>
-      </div>
+      <h5 class="text-white">About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-white" href="#">Team</a></li>
+        <li><a class="text-white" href="#">Locations</a></li>
+        <li><a class="text-white" href="#">Privacy</a></li>
+        <li><a class="text-white" href="#">Terms</a></li>
+      </ul>
+    </div>
     <div class="col-5 offset-1 col-md">
       <h5 class="text-white">Usefull Resources</h5>
       <ul class="list-unstyled text-small">

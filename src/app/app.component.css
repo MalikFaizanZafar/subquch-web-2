@@ -6,3 +6,8 @@
 .sq-anchor {
   color: #455A64 !important;
 }
+
+.sq-active-link {
+  border-bottom: 2px solid #455A64 !important;
+  transition: all;
+}

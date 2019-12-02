@@ -91,7 +91,9 @@
 .sq-anchor {
   color: #455A64 !important;
 }
-
+.sq-main-color {
+  background-color: #455A64 !important;
+}
 .sq-button {
   background-color: #455A64 !important;
 }
