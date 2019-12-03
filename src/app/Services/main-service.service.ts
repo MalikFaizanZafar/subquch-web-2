@@ -9,6 +9,10 @@ export class MainServiceService {
   serverUrl = 'http://localhost:3000'
   constructor(private http: HttpClient) { }
 
+  getCategories(){
+    return this.http.get<any>(`${this.serverUrl}/buisness/categories`);
+  }
+
   getProjects(){
     return this.http.get<any>(`${this.serverUrl}/buisness`);
   }

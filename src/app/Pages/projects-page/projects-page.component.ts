@@ -8,7 +8,7 @@ import { MainServiceService } from "src/app/Services/main-service.service";
 })
 export class ProjectsPageComponent implements OnInit {
   projects: any[] = [];
-
+  categories: any[] = [];
   @ViewChild("searchInput", { static: true }) searchInput: ElementRef;
   @ViewChild("minInput", { static: true }) minInput: ElementRef;
   @ViewChild("maxInput", { static: true }) maxInput: ElementRef;
@@ -16,9 +16,12 @@ export class ProjectsPageComponent implements OnInit {
   constructor(private mainService: MainServiceService) {}
 
   ngOnInit() {
-    this.mainService.getProjects().subscribe(res => {
-      this.projects = res;
-    });
+    this.mainService.getCategories().subscribe(catRes => {
+      this.mainService.getProjects().subscribe(res => {
+        this.categories = catRes;
+        this.projects = res;
+      });
+    })
   }
 
   searchHandler() {
