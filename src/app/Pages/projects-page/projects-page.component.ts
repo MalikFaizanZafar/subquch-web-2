@@ -10,6 +10,8 @@ export class ProjectsPageComponent implements OnInit {
   projects: any[] = [];
 
   @ViewChild("searchInput", { static: true }) searchInput: ElementRef;
+  @ViewChild("minInput", { static: true }) minInput: ElementRef;
+  @ViewChild("maxInput", { static: true }) maxInput: ElementRef;
 
   constructor(private mainService: MainServiceService) {}
 
@@ -32,5 +34,13 @@ export class ProjectsPageComponent implements OnInit {
     this.mainService.getProjects().subscribe(res => {
       this.projects = res;
     });
+  }
+
+  goHandler(){
+    this.mainService.getFilteredProjects(this.minInput.nativeElement.value, this.maxInput.nativeElement.value).subscribe(res => {
+      this.projects = res;
+      this.minInput.nativeElement.value = '';
+      this.maxInput.nativeElement.value = '';
+    })
   }
 }

@@ -16,4 +16,10 @@ export class MainServiceService {
   getSearchedProjects( key : string){
     return this.http.get<any>(`${this.serverUrl}/buisness?title=${key}`);
   }
+
+  getFilteredProjects(min: number, max: number){
+    console.log("min : ", min);
+    console.log("max : ", max);
+    return this.http.get<any>(`${this.serverUrl}/buisness/filter?min=${min}&max=${max}`);
+  }
 }

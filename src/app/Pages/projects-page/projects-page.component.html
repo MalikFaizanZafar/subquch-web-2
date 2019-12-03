@@ -26,16 +26,16 @@
       <span (click)="viewAllHandler()" class="sq-span">View All</span>
     </div>
     <div class="col-4 offset-1">
-      <form class="form-inline">
+      <div class="form-inline">
         <label class="sr-only" for="inlineFormInput">Min</label>
-        <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Min">
+        <input #minInput type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Min">
       
         <label class="sr-only" for="inlineFormInput">Max</label>
-        <input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Max">
+        <input #maxInput type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Max">
       
       
-        <button type="submit" class="btn btn-primary sq-main-color">Go</button>
-      </form>
+        <button (click)="goHandler()" class="btn btn-primary sq-main-color">Go</button>
+      </div>
     </div>
   </div>
 </div>
