@@ -12,4 +12,8 @@ export class MainServiceService {
   getProjects(){
     return this.http.get<any>(`${this.serverUrl}/buisness`);
   }
+
+  getSearchedProjects( key : string){
+    return this.http.get<any>(`${this.serverUrl}/buisness?title=${key}`);
+  }
 }

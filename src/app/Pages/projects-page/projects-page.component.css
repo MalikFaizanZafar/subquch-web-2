@@ -104,3 +104,8 @@
 .sq-normal-text {
   color: #607d8b !important;
 }
+
+.sq-span:hover {
+  cursor: pointer;
+  text-decoration-line: underline;
+}

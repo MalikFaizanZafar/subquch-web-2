@@ -1,21 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { MainServiceService } from 'src/app/Services/main-service.service';
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import { MainServiceService } from "src/app/Services/main-service.service";
 
 @Component({
-  selector: 'app-projects-page',
-  templateUrl: './projects-page.component.html',
-  styleUrls: ['./projects-page.component.css']
+  selector: "app-projects-page",
+  templateUrl: "./projects-page.component.html",
+  styleUrls: ["./projects-page.component.css"]
 })
 export class ProjectsPageComponent implements OnInit {
+  projects: any[] = [];
 
-  projects: any[]= [];
-  constructor(private mainService : MainServiceService) { }
+  @ViewChild("searchInput", { static: true }) searchInput: ElementRef;
+
+  constructor(private mainService: MainServiceService) {}
 
   ngOnInit() {
     this.mainService.getProjects().subscribe(res => {
       this.projects = res;
-      console.log('projects are : ', this.projects)
-    })
+    });
   }
 
+  searchHandler() {
+    this.mainService
+      .getSearchedProjects(this.searchInput.nativeElement.value)
+      .subscribe(res => {
+        this.projects = res;
+        this.searchInput.nativeElement.value = '';
+      });
+  }
+
+  viewAllHandler() {
+    this.mainService.getProjects().subscribe(res => {
+      this.projects = res;
+    });
+  }
 }

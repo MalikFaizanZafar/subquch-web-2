@@ -5,6 +5,7 @@
         <input
           type="text"
           class="form-control"
+          #searchInput
           placeholder="Find Projects"
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
@@ -14,11 +15,15 @@
             class="btn  sq-main-color text-white"
             type="button"
             id="button-addon2"
+            (click)="searchHandler()"
           >
             Search
           </button>
         </div>
       </div>
+    </div>
+    <div class="col-1 mt-2">
+      <span (click)="viewAllHandler()" class="sq-span">View All</span>
     </div>
     <div class="col-4 offset-1">
       <form class="form-inline">
