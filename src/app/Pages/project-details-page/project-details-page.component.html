@@ -57,4 +57,26 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>About This Project</h2>
+      <p style="font-size: 18px; line-height: 40px; width: 90%;">
+        {{ project.summary }}
+      </p>
+      <p style="font-size: 18px; line-height: 40px; width: 90%;">
+        {{ project.detailDescription }}
+      </p>
+    </div>
+  </div>
+  <div class="row my-5">
+    <div class="col-md-4">
+      <h5> <span class="sq-normal-text"> Start Date </span>  : {{ project.startDate | date }}</h5>
+    </div>
+    <div class="col-md-4">
+        <h5 > <span class="sq-normal-text"> End Date</span>  : {{ project.endDate | date }}</h5>
+      </div>
+      <div class="col-md-4">
+          <h5 > <span class="sq-normal-text">City</span> : Lahore</h5>
+        </div>
+  </div>
 </div>
