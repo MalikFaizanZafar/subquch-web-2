@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsPageComponent } from './Pages/projects-page/projects-page.component';
 import { ProjectDetailsPageComponent } from './Pages/project-details-page/project-details-page.component';
+import { AboutUsPageComponent } from './Pages/about-us-page/about-us-page.component';
 
 const routes : Routes = [
   {
@@ -24,7 +25,8 @@ const routes : Routes = [
     AppComponent,
     HomePageComponent,
     ProjectsPageComponent,
-    ProjectDetailsPageComponent
+    ProjectDetailsPageComponent,
+    AboutUsPageComponent
   ],
   imports: [
     BrowserModule,
