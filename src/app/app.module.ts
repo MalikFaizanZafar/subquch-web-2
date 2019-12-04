@@ -10,6 +10,7 @@ import {  Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsPageComponent } from './Pages/projects-page/projects-page.component';
+import { ProjectDetailsPageComponent } from './Pages/project-details-page/project-details-page.component';
 
 const routes : Routes = [
   {
@@ -22,7 +23,8 @@ const routes : Routes = [
   declarations: [
     AppComponent,
     HomePageComponent,
-    ProjectsPageComponent
+    ProjectsPageComponent,
+    ProjectDetailsPageComponent
   ],
   imports: [
     BrowserModule,

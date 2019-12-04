@@ -1,0 +1,60 @@
+<div class="container-fluid py-5 mx-5">
+  <div class="row">
+    <div class="col-md-12 ">
+      <div class="row">
+        <div class="col-md-9">
+          <h3>
+            {{ project.title }}
+          </h3>
+          <mat-carousel proportion="40">
+            <mat-carousel-slide
+              *ngFor="let image of project.images"
+              [image]="image.imageUrl"
+            >
+            </mat-carousel-slide>
+          </mat-carousel>
+        </div>
+        <div class="col-md-3">
+          <div class="row mb-0">
+            <div
+              class="card bg-light mb-3"
+              style="max-width: 22rem; max-height: 50rem;"
+            >
+              <div class="card-header sq-bg text-white">Amount Details</div>
+              <div class="card-body bg-white px-0">
+                <h6 class="card-title px-3">Disclaimer</h6>
+                <p class="card-text sq-normal-text px-3">
+                  {{ project.disclaimer.substring(0, 300) }}...
+                </p>
+                <h6 class="card-title px-3">Total Worth</h6>
+                <p class="card-text sq-normal-text px-3">
+                  {{ project.totalWorth }}
+                </p>
+                <ul class="nav nav-tabs card-header-tabs sq-bg mx-0">
+                  <li class="nav-item w-50 text-center">
+                    <a class="nav-link text-white" href="#"
+                      >Monthly Investment</a
+                    >
+                  </li>
+                  <li class="nav-item w-50 text-center">
+                    <a class="nav-link text-white" href="#"
+                      >Yearly Investment</a
+                    >
+                  </li>
+                </ul>
+                <h6 class="card-title mt-4 px-3">Formula</h6>
+                <p class="card-text sq-normal-text px-3">
+                  total / total * 100
+                </p>
+                <h6 class="card-title px-3">Monthly Profit</h6>
+                <p class="card-text sq-normal-text px-3">
+                  Rs. 1000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
