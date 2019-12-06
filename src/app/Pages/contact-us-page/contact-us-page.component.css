@@ -11,3 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.sq-bg {
+  background-color: #455A64 !important;
+}
