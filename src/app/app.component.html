@@ -45,8 +45,8 @@
           >
         </li>
         <li
-        style="border-right: 1px solid #455A64;"
-        class="text-center font-weight-bold px-3 py-3 active w-25"
+          style="border-right: 1px solid #455A64;"
+          class="text-center font-weight-bold px-3 py-3 active w-25"
         >
           <a
             routerLinkActive="sq-active-link"
@@ -56,10 +56,14 @@
             >About Us</a
           >
         </li>
-        <li class="text-center font-weight-bold px-3 py-3  w-25">
+        <li
+          style="border-right: 1px solid #455A64;"
+          class="text-center font-weight-bold px-3 py-3 active w-25"
+        >
           <a
             routerLinkActive="sq-active-link"
             [routerLinkActiveOptions]="{ exact: true }"
+            [routerLink]="['contact']"
             class="sq-anchor text-decoration-none py-2"
             >Contact Us</a
           >

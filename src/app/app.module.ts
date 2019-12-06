@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectsPageComponent } from './Pages/projects-page/projects-page.component';
 import { ProjectDetailsPageComponent } from './Pages/project-details-page/project-details-page.component';
 import { AboutUsPageComponent } from './Pages/about-us-page/about-us-page.component';
+import { ContactUsPageComponent } from './Pages/contact-us-page/contact-us-page.component';
+import { SignInPageComponent } from './Pages/sign-in-page/sign-in-page.component';
+import { SignUpPageComponent } from './Pages/sign-up-page/sign-up-page.component';
 
 const routes : Routes = [
   {
@@ -26,7 +29,10 @@ const routes : Routes = [
     HomePageComponent,
     ProjectsPageComponent,
     ProjectDetailsPageComponent,
-    AboutUsPageComponent
+    AboutUsPageComponent,
+    ContactUsPageComponent,
+    SignInPageComponent,
+    SignUpPageComponent
   ],
   imports: [
     BrowserModule,
