@@ -1,7 +1,7 @@
 .parallax {
   /* The image used */
   background-image: url("https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1200");
-  height: 700px;
+  height: 730px;
   /* Set a specific height */
   min-height: 500px; 
 
@@ -14,4 +14,8 @@
 
 .sq-bg {
   background-color: #455A64 !important;
+}
+
+.sq-primary-bg {
+  background-color: #03A9F4 !important;
 }

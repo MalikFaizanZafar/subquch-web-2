@@ -11,3 +11,7 @@
   border-bottom: 2px solid #455A64 !important;
   transition: all;
 }
+
+.sq-primary-bg {
+  background-color: #03A9F4 !important;
+}
