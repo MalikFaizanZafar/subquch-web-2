@@ -3,15 +3,16 @@
       
       <div class="col-md-5 bg-dark px-5 py-3 rounded" style="opacity: 0.8;">
           <h2 class="text-center text-white mb-3">Login In</h2>
-        <form>
+        <form [formGroup]="userForm" (ngSubmit)="formSubmitHandler()" >
           <div class="form-group row">
             <label for="exampleInputEmail1" class="text-white ml-3">Email</label>
             <div class="col-sm-12">
               <input
                 type="text"
-                class="form-control bg-transparent"
+                class="form-control bg-transparent text-white"
                 id="inputPassword"
                 placeholder="tshakeel@gmail.com"
+                formControlName="email"
               />
             </div>
           </div>
@@ -20,7 +21,8 @@
             <div class="col-sm-12">
               <input
                 type="text"
-                class="form-control bg-transparent"
+                formControlName="password"
+                class="form-control bg-transparent text-white"
                 id="inputPassword"
                 placeholder="Message"
                 rows="8"
@@ -30,7 +32,7 @@
           <div class="col-md-12">
             <button
               class="btn btn-block sq-primary-bg text-white w-100"
-              type="button"
+              type="submit"
             >
               Send
             </button>

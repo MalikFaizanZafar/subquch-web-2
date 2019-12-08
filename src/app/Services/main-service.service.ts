@@ -9,6 +9,14 @@ export class MainServiceService {
   serverUrl = 'http://localhost:3000'
   constructor(private http: HttpClient) { }
 
+  signUpUser(user : any){
+    return this.http.post<any>(`${this.serverUrl}/users/signup`, user);
+  }
+
+  signInUser(user : any){
+    return this.http.post<any>(`${this.serverUrl}/users/signin`, user);
+  }
+
   getCategories(){
     return this.http.get<any>(`${this.serverUrl}/buisness/categories`);
   }
