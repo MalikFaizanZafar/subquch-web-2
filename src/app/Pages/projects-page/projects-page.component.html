@@ -1,3 +1,11 @@
+<ngx-spinner
+  bdColor="#455A64"
+  size="large"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
 <div class="container-fluid pt-2 pb-4">
   <div class="row mt-5">
     <div class="col-3 offset-1">
@@ -29,7 +37,7 @@
       <!-- <label for="exampleFormControlSelect1">Categories</label> -->
       <select class="form-control" id="exampleFormControlSelect1">
         <option>Select Category</option>
-        <option *ngFor="let category of categories">{{category.name}}</option>
+        <option *ngFor="let category of categories">{{ category.name }}</option>
       </select>
     </div>
     <div class="col-4 offset-1">
@@ -75,9 +83,11 @@
             <div class="card-body">
               <h5 class="card-title">{{ project.title }}</h5>
               <p class="card-text sq-normal-text">
-                {{ project.summary }}
+                {{ project.summary.substring(0, 100) }}...
               </p>
-              <a routerLink="{{project.id}}" class="btn btn-primary sq-button">View Project</a>
+              <a routerLink="{{ project.id }}" class="btn btn-primary sq-button"
+                >View Project</a
+              >
             </div>
           </div>
         </div>

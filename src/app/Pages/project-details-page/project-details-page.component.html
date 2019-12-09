@@ -1,34 +1,42 @@
+<ngx-spinner
+  bdColor="#455A64"
+  size="large"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
 <div class="container-fluid py-5 mx-5">
   <div class="row">
     <div class="col-md-12 ">
       <div class="row">
         <div class="col-md-9">
           <h3>
-            {{ project.title }}
+            {{ project?.title }}
           </h3>
           <mat-carousel proportion="40">
             <mat-carousel-slide
-              *ngFor="let image of project.images"
+              *ngFor="let image of project?.images"
               [image]="image.imageUrl"
             >
             </mat-carousel-slide>
           </mat-carousel>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-12 col-xs-12">
           <div class="row mb-0">
             <div
               class="card bg-light mb-3"
-              style="max-width: 22rem; max-height: 50rem;"
+              style="min-width: 22rem; max-height: 50rem;"
             >
               <div class="card-header sq-bg text-white">Amount Details</div>
               <div class="card-body bg-white px-0">
                 <h6 class="card-title px-3">Disclaimer</h6>
                 <p class="card-text sq-normal-text px-3">
-                  {{ project.disclaimer.substring(0, 300) }}...
+                  {{ project?.disclaimer.substring(0, 300) }}...
                 </p>
                 <h6 class="card-title px-3">Total Worth</h6>
                 <p class="card-text sq-normal-text px-3">
-                  {{ project.totalWorth }}
+                  {{ project?.totalWorth }}
                 </p>
                 <ul class="nav nav-tabs card-header-tabs sq-bg mx-0">
                   <li class="nav-item w-50 text-center">
@@ -61,19 +69,19 @@
     <div class="col-md-12">
       <h2>About This Project</h2>
       <p style="font-size: 18px; line-height: 40px; width: 90%;">
-        {{ project.summary }}
+        {{ project?.summary }}
       </p>
       <p style="font-size: 18px; line-height: 40px; width: 90%;">
-        {{ project.detailDescription }}
+        {{ project?.detailDescription }}
       </p>
     </div>
   </div>
   <div class="row my-5">
     <div class="col-md-4">
-      <h5> <span class="sq-normal-text"> Start Date </span>  : {{ project.startDate | date }}</h5>
+      <h5> <span class="sq-normal-text"> Start Date </span>  : {{ project?.startDate | date }}</h5>
     </div>
     <div class="col-md-4">
-        <h5 > <span class="sq-normal-text"> End Date</span>  : {{ project.endDate | date }}</h5>
+        <h5 > <span class="sq-normal-text"> End Date</span>  : {{ project?.endDate | date }}</h5>
       </div>
       <div class="col-md-4">
           <h5 > <span class="sq-normal-text">City</span> : Lahore</h5>

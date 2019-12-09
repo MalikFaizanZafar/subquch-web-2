@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainServiceService } from 'src/app/Services/main-service.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home-page',
@@ -8,12 +9,13 @@ import { MainServiceService } from 'src/app/Services/main-service.service';
 })
 export class HomePageComponent implements OnInit {
   projects: any[]= [];
-  constructor(private mainService : MainServiceService) { }
+  constructor(private mainService : MainServiceService, private spinnerService : NgxSpinnerService) { }
 
   ngOnInit() {
+    this.spinnerService.show();
     this.mainService.getProjects().subscribe(res => {
       this.projects = res.splice(4,3);
-      console.log('projects are : ', this.projects)
+      this.spinnerService.hide();
     })
   }
 

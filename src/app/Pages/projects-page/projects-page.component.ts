@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { MainServiceService } from "src/app/Services/main-service.service";
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: "app-projects-page",
@@ -13,13 +14,15 @@ export class ProjectsPageComponent implements OnInit {
   @ViewChild("minInput", { static: true }) minInput: ElementRef;
   @ViewChild("maxInput", { static: true }) maxInput: ElementRef;
 
-  constructor(private mainService: MainServiceService) {}
+  constructor(private mainService: MainServiceService, private spinnerService : NgxSpinnerService) {}
 
   ngOnInit() {
+    this.spinnerService.show();
     this.mainService.getCategories().subscribe(catRes => {
       this.mainService.getProjects().subscribe(res => {
         this.categories = catRes;
         this.projects = res;
+        this.spinnerService.hide();
       });
     })
   }
