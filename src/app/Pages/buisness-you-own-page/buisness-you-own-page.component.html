@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="col-md-1">
-          
+
         </div>
         <div
           class="col-md-3 col-sm-6 col-xs-6 mb-5 mt-2"
@@ -44,7 +44,7 @@
                 {{ project?.buisness.summary.substring(0, 100) }}...
               </p>
               <a
-                routerLink="{{ project?.buisness.id }}"
+                [routerLink]="['/projects', project?.buisness.id]"
                 class="btn btn-primary sq-button"
                 >View Project</a
               >

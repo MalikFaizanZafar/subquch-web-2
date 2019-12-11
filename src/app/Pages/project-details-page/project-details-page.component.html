@@ -86,4 +86,27 @@
           <h5 > <span class="sq-normal-text">City</span> : Lahore</h5>
         </div>
   </div>
+  <div class="row">
+    <h4 class="text-center font-weight-bold w-100">Monthly Reports</h4>
+    <div class="col-md-4 offset-md-4">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let report of project?.reports">
+                <td>{{report.id}}</td>
+                <td>{{report.uploadDate | date}}</td>
+                <td>
+                  <a [href]="report.url">View</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
 </div>
