@@ -16,6 +16,7 @@ import { ContactUsPageComponent } from './Pages/contact-us-page/contact-us-page.
 import { SignInPageComponent } from './Pages/sign-in-page/sign-in-page.component';
 import { SignUpPageComponent } from './Pages/sign-up-page/sign-up-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BuisnessYouOwnPageComponent } from './Pages/buisness-you-own-page/buisness-you-own-page.component';
 
 const routes : Routes = [
   {
@@ -33,7 +34,8 @@ const routes : Routes = [
     AboutUsPageComponent,
     ContactUsPageComponent,
     SignInPageComponent,
-    SignUpPageComponent
+    SignUpPageComponent,
+    BuisnessYouOwnPageComponent
   ],
   imports: [
     BrowserModule,

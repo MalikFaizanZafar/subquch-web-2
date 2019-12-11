@@ -21,6 +21,9 @@ export class MainServiceService {
     return this.http.get<any>(`${this.serverUrl}/buisness/categories`);
   }
 
+  getBuisnessYouOwn(id : number){
+    return this.http.get<any>(`${this.serverUrl}/users/${id}/buisness`);
+  }
   getProjects(){
     return this.http.get<any>(`${this.serverUrl}/buisness`);
   }

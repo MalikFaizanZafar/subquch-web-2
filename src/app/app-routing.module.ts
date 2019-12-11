@@ -7,6 +7,7 @@ import { AboutUsPageComponent } from './Pages/about-us-page/about-us-page.compon
 import { ContactUsPageComponent } from './Pages/contact-us-page/contact-us-page.component';
 import { SignInPageComponent } from './Pages/sign-in-page/sign-in-page.component';
 import { SignUpPageComponent } from './Pages/sign-up-page/sign-up-page.component';
+import { BuisnessYouOwnPageComponent } from './Pages/buisness-you-own-page/buisness-you-own-page.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'projects/:id',
     component: ProjectDetailsPageComponent
+  },
+  {
+    path: 'buisness-you-own/:id',
+    component: BuisnessYouOwnPageComponent
   }
 ];
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MainServiceService } from 'src/app/Services/main-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in-page',
@@ -10,7 +11,7 @@ import { MainServiceService } from 'src/app/Services/main-service.service';
 export class SignInPageComponent implements OnInit {
 
   userForm: FormGroup;
-  constructor(private mainService : MainServiceService) { }
+  constructor(private mainService : MainServiceService, private router : Router) { }
 
   ngOnInit() {
     this.userForm = new FormGroup({
@@ -21,9 +22,10 @@ export class SignInPageComponent implements OnInit {
 
   formSubmitHandler(){
     console.log('submitted form : ', this.userForm.value);
-    this.mainService.signInUser(this.userForm.value).subscribe(res => {
-      console.log("res : ", res);
-    })
+    this.router.navigate(['buisness-you-own', '4']);
+    // this.mainService.signInUser(this.userForm.value).subscribe(res => {
+    //   console.log("res : ", res);
+    // })
   }
 
 }
